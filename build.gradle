@@ -1,20 +1,20 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'application'  // Add this
 
 group = 'com.example1'
 version = '1.0-SNAPSHOT'
-
 description = """MyMavenToGradle"""
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
-
+mainClassName = 'com.example1.App'  // Add this (use mainClassName for older Gradle syntax)
 
 repositories {
-        
-     maven { url "https://repo.maven.apache.org/maven2" }
+    maven { url "https://repo.maven.apache.org/maven2" }
 }
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version:'3.8.1'
 }
