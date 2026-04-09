@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Run Application') {
             steps {
-                sh 'java -jar target/MyMavenToGradle-1.0-SNAPSHOT.jar'  // Run Maven-built JAR
+                sh 'mvn exec:java -Dexec.mainClass="com.example.App"'  // Run Maven-built JAR
             }
         }
     }
